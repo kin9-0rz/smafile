@@ -8,6 +8,7 @@ class SmaliFile:
         self.modified = False
 
         self.class_name = None
+        self.class_sign = None
         self.super = None
         self.interfaces = []
         self.methods = []
@@ -20,9 +21,10 @@ class SmaliFile:
         with open(file_path, 'r', encoding='utf-8') as f:
             self.content = f.read()
 
-        p = re.compile(r'\.class (.+)')
+        p = re.compile(r'^\.class[a-z\s]+(.+)')
         line = p.search(self.content).groups()
         self.class_name = line[0]
+        self.sign = line[0]
 
         p = re.compile(r'\.super (.+)')
         line = p.search(self.content).groups()
@@ -53,7 +55,8 @@ class SmaliFile:
                     print(file_path)
                     print(line, e)
 
-            self.fields.append(SmaliField(self.class_name, field_name, field_type, field_value))
+            self.fields.append(SmaliField(
+                self.class_name, field_name, field_type, field_value))
 
         method_regex = r'\.method .*?(?=\n)'
         p = re.compile(method_regex)
@@ -68,7 +71,9 @@ class SmaliFile:
 
             result = p2.search(self.content).group()
             body = result.replace(line, '').replace('.end method', '')
-            self.methods.append(SmaliMethod(self.class_name, method_signature,body))
+
+            sm = SmaliMethod(self.class_name, method_signature, body)
+            self.methods.append(sm)
 
     def build_method_regex(self, mtd_sign):
         return r'\.method .*?%s((?!\.end method)[.\s\S])*.end method' % (re.escape(mtd_sign))
