@@ -13,9 +13,14 @@ python setup.py install
 ### Usage
 
 ```python
-from smafile import SmaliFile
+from smafile import SmaliDir, SmaliMethod
 
-sf = SmaliFile(smali_file_path)
+sd = SmaliDir('smali')
+test_class_name = 'Lcom/test/Test;'
+test_class_file = r'smali\com\test\Test.smali'
+test_mtd = 'test(Ljava/lang/String;[B[I]BICF)Ljava/lang/String;'
+
+sf = sd.get_smali_file(test_class_name)
 
 print(sf.content)
 print(sf.class_name)
@@ -26,6 +31,10 @@ for field in sf.fields:
 
 for mtd in sf.methods:
     print(mtd.descriptor)
+
+
+mtd = sd.get_method(test_class_name, test_mtd)
+body = mtd.get_body()
 
 # rename clz/field/method
 sd.update_desc('La/b/c;',
