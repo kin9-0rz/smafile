@@ -1,4 +1,4 @@
-#smafile
+# smafile
 
 ### Install
 
