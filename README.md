@@ -26,4 +26,12 @@ for field in sf.fields:
 
 for mtd in sf.methods:
     print(mtd.descriptor)
+
+# rename clz/field/method
+sd.update_desc('La/b/c;',
+                'La/b/Test;')
+sd.update_desc('La/b/c;->b:I',
+                'La/b/c;->newb:I')
+sd.update_desc('La/b/c;->b()V',
+                'La/b/c;->newb()V')
 ```
