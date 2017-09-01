@@ -40,12 +40,6 @@ class SmaliDir:
         sf = self.get_smali_file(clz_name)
         return sf.get_field(field_desc)
 
-    def update_method(self, mtd_name):
-        '''
-        修改方法体，并写入文件
-        '''
-        pass
-
     def xref(self, desc):
         '''找出所有引用了该类、方法、变量的SmaliFile'''
         sfs = []
@@ -138,7 +132,7 @@ class SmaliFile:
         return self._fields
 
     def get_methods(self):
-        return self._fields
+        return self._methods
 
     def get_content(self):
         return self._content
@@ -247,15 +241,16 @@ class SmaliFile:
             f.write(self._content)
 
     def update_method(self, mtd):
+        print(str(mtd))
         mbody_ptn = (
             r'\.method .*?%s((?!\.end method)[.\s\S])*'
-            r'\.end method') % re.escape(str(mtd))
+            r'\.end method') % re.escape(mtd.get_name() + mtd.get_sign())
         prog = re.compile(mbody_ptn)
         result = prog.search(self._content).group()
         start = result.index('\n')
         old_body = result[start:-11]
         if old_body in self._content:
-            self._content = self._content.replace(old_body, mtd.body)
+            self._content = self._content.replace(old_body, mtd.get_body())
 
 
 class SmaliField:
@@ -306,8 +301,6 @@ class SmaliMethod:
         self._modified = False
 
         self._access_flags = mtd_sign.split(' ')
-        # description
-        self._desc = self._class + '->' + self._access_flags[-1]
 
         result = re.match(r'^(.*?)\((.*?)\)(.*?)$',
                           self._access_flags[-1]).groups()
@@ -320,6 +313,9 @@ class SmaliMethod:
         self._body = body
         # signature
         self._sign = '(' + self._proto + ')' + self._return_type
+
+        # description
+        self._desc = self._class + '->' + self._name + self._sign
 
         # parameters
         self._params = []
