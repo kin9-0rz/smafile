@@ -221,6 +221,11 @@ class SmaliFile:
 
     def save(self, file_path=None):
         new_path = file_path if file_path else self._file_path
+
+        new_dir = os.path.dirname(new_path)
+        if not os.path.exists(new_dir):
+            os.makedirs(new_dir)
+
         # 写入新文件
         with open(new_path, 'w', encoding='utf-8') as f:
             f.write(self._content)

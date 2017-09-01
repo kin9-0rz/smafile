@@ -3,8 +3,8 @@ import unittest
 from smafile import SmaliDir, SmaliMethod
 
 sd = SmaliDir('smali')
-test_class_name = 'Lcom/android/mtp/rp/Test;'
-test_class_file = r'smali\com\android\mtp\rp\Test.smali'
+test_class_name = 'Lcom/test/Test;'
+test_class_file = r'smali\com\test\Test.smali'
 test_mtd = 'test(Ljava/lang/String;[B[I]BICF)Ljava/lang/String;'
 
 
@@ -13,16 +13,9 @@ class Test(unittest.TestCase):
     def test_SmaliDir(self):
 
         self.assertEqual(len(sd), 6)
-        sfa = None
-        for sf in sd:
-            self.assertIn(r'smali\com\android\mtp\rp', sf.get_file_path())
-            if r'smali\com\android\mtp\rp\Test' in sf.get_file_path():
-                sfa = sf
 
         sf = sd.get_smali_file(test_class_name)
-        self.assertEqual(sfa, sf)
         self.assertEqual(sf.get_class(), test_class_name)
-        self.assertEqual(sfa.get_class(), test_class_name)
 
     def test_SmaliMethod(self):
         mtd = sd.get_method(test_class_name, test_mtd)
@@ -55,8 +48,8 @@ class Test(unittest.TestCase):
         self.assertEqual(sf.get_class(), test_class_name)
 
     def test_SmaliField(self):
-        clz = 'Lcom/android/mtp/rp/MyService;'
-        field_desc = 'Lcom/android/mtp/rp/MyService;->a:Ljava/lang/String;'
+        clz = 'Lcom/test/MyService;'
+        field_desc = 'Lcom/test/MyService;->a:Ljava/lang/String;'
         f = sd.get_field(clz, 'a:Ljava/lang/String;')
         self.assertEqual(f.get_class(), clz)
         self.assertEqual(f.get_name(), 'a')
@@ -72,6 +65,3 @@ if __name__ == '__main__':
     test.test_SmaliMethod()
     test.test_SmaliField()
     test.test_SmaliFile()
-
-    # sd.update_desc('Lcom/android/mtp/rp/MyService;->b:I',
-    #                'Lcom/android/mtp/rp/MyService;->newb:I')

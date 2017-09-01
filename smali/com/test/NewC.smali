@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/NewC;
+.class public Lcom/test/NewC;
 .super Ljava/lang/Thread;
 
 
@@ -62,43 +62,43 @@
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_a:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_a:Ljava/lang/String;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_b:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_b:Ljava/lang/String;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newc:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newc:Ljava/lang/String;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newd:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newd:Ljava/lang/String;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->e:Ljava/util/List;
+    sput-object v0, Lcom/test/NewC;->e:Ljava/util/List;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newf:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newf:Ljava/lang/String;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newg:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newg:Ljava/lang/String;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newh:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newh:Ljava/lang/String;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sput-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     const/16 v0, 0xa
 
@@ -106,11 +106,11 @@
 
     fill-array-data v0, :array_1da
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_a:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_a:Ljava/lang/String;
 
     const/16 v0, 0x9
 
@@ -118,11 +118,11 @@
 
     fill-array-data v0, :array_1e4
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_b:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_b:Ljava/lang/String;
 
     const/16 v0, 0x14
 
@@ -130,11 +130,11 @@
 
     fill-array-data v0, :array_1ee
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newc:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newc:Ljava/lang/String;
 
     const/16 v0, 0x8
 
@@ -142,11 +142,11 @@
 
     fill-array-data v0, :array_1fc
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newd:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newd:Ljava/lang/String;
 
     const/16 v0, 0xb
 
@@ -154,11 +154,11 @@
 
     fill-array-data v0, :array_204
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newf:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newf:Ljava/lang/String;
 
     const/16 v0, 0xb
 
@@ -166,11 +166,11 @@
 
     fill-array-data v0, :array_20e
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newg:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newg:Ljava/lang/String;
 
     const/16 v0, 0x10
 
@@ -178,13 +178,13 @@
 
     fill-array-data v0, :array_218
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newh:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newh:Ljava/lang/String;
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     const/16 v1, 0x14
 
@@ -192,49 +192,49 @@
 
     fill-array-data v1, :array_224
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v2, [B
 
     fill-array-data v1, :array_232
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v2, [B
 
     fill-array-data v1, :array_244
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v5, [B
 
     fill-array-data v1, :array_256
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     const/16 v1, 0x1b
 
@@ -242,85 +242,85 @@
 
     fill-array-data v1, :array_26a
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v2, [B
 
     fill-array-data v1, :array_27c
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v3, [B
 
     fill-array-data v1, :array_28e
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v4, [B
 
     fill-array-data v1, :array_2a2
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v3, [B
 
     fill-array-data v1, :array_2b6
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v4, [B
 
     fill-array-data v1, :array_2ca
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v6, [B
 
     fill-array-data v1, :array_2de
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     const/16 v1, 0x1b
 
@@ -328,49 +328,49 @@
 
     fill-array-data v1, :array_2f4
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v2, [B
 
     fill-array-data v1, :array_306
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v3, [B
 
     fill-array-data v1, :array_318
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v4, [B
 
     fill-array-data v1, :array_32c
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     const/16 v1, 0x1a
 
@@ -378,61 +378,61 @@
 
     fill-array-data v1, :array_340
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v5, [B
 
     fill-array-data v1, :array_352
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v5, [B
 
     fill-array-data v1, :array_366
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v6, [B
 
     fill-array-data v1, :array_37a
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v0, Lcom/test/NewC;->i:Ljava/util/Set;
 
     new-array v1, v6, [B
 
     fill-array-data v1, :array_390
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->e:Ljava/util/List;
+    sget-object v0, Lcom/test/NewC;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -442,11 +442,11 @@
 
     fill-array-data v0, :array_3a6
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const/4 v0, 0x7
 
@@ -454,11 +454,11 @@
 
     fill-array-data v0, :array_3ae
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_k:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_k:Ljava/lang/String;
 
     const/16 v0, 0x8
 
@@ -466,11 +466,11 @@
 
     fill-array-data v0, :array_3b6
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->new_l:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->new_l:Ljava/lang/String;
 
     return-void
 
@@ -1323,25 +1323,25 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
-    iput-boolean v1, p0, Lcom/android/mtp/rp/NewC;->o:Z
+    iput-boolean v1, p0, Lcom/test/NewC;->o:Z
 
     invoke-static {}, La/a/e/e;->a()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/mtp/rp/NewC;->p:Z
+    iput-boolean v0, p0, Lcom/test/NewC;->p:Z
 
-    iput-boolean v1, p0, Lcom/android/mtp/rp/NewC;->q:Z
+    iput-boolean v1, p0, Lcom/test/NewC;->q:Z
 
-    iput-boolean v1, p0, Lcom/android/mtp/rp/NewC;->r:Z
+    iput-boolean v1, p0, Lcom/test/NewC;->r:Z
 
-    iput-boolean v1, p0, Lcom/android/mtp/rp/NewC;->s:Z
+    iput-boolean v1, p0, Lcom/test/NewC;->s:Z
 
-    iput-boolean v1, p0, Lcom/android/mtp/rp/NewC;->t:Z
+    iput-boolean v1, p0, Lcom/test/NewC;->t:Z
 
-    iput-object p1, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iput-object p1, p0, Lcom/test/NewC;->m:La/a/a;
 
     if-eqz p1, :cond_2d
 
@@ -1357,10 +1357,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     :goto_29
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->a()V
+    invoke-direct {p0}, Lcom/test/NewC;->a()V
 
     return-void
 
@@ -1373,7 +1373,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     goto :goto_29
 .end method
@@ -1402,7 +1402,7 @@
     const/4 v4, 0x1
 
     :try_start_1
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, ""
 
@@ -1412,7 +1412,7 @@
 
     fill-array-data v2, :array_f0
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1420,19 +1420,19 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/mtp/rp/Hello;->a([B)Ljava/security/Key;
+    invoke-static {v2}, Lcom/test/Hello;->a([B)Ljava/security/Key;
 
     move-result-object v2
 
     const-string v3, "DES"
 
-    invoke-static {v1, v2, v3}, Lcom/android/mtp/rp/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcom/test/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, La/a/a;->a(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     invoke-virtual {v0}, La/a/a;->e()V
     :try_end_26
@@ -1448,7 +1448,7 @@
 
     fill-array-data v0, :array_f8
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1458,7 +1458,7 @@
 
     fill-array-data v1, :array_10c
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1466,17 +1466,17 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/mtp/rp/Hello;->a([B)Ljava/security/Key;
+    invoke-static {v1}, Lcom/test/Hello;->a([B)Ljava/security/Key;
 
     move-result-object v1
 
     const-string v2, "DES"
 
-    invoke-static {v0, v1, v2}, Lcom/android/mtp/rp/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/test/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newg:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newg:Ljava/lang/String;
 
     const/16 v0, 0x20
 
@@ -1484,7 +1484,7 @@
 
     fill-array-data v0, :array_114
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1494,7 +1494,7 @@
 
     fill-array-data v1, :array_128
 
-    invoke-static {v1}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1502,24 +1502,24 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/mtp/rp/Hello;->a([B)Ljava/security/Key;
+    invoke-static {v1}, Lcom/test/Hello;->a([B)Ljava/security/Key;
 
     move-result-object v1
 
     const-string v2, "DES"
 
-    invoke-static {v0, v1, v2}, Lcom/android/mtp/rp/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/test/Hello;->a(Ljava/lang/String;Ljava/security/Key;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/NewC;->newf:Ljava/lang/String;
+    sput-object v0, Lcom/test/NewC;->newf:Ljava/lang/String;
     :try_end_72
     .catch Ljava/security/InvalidKeyException; {:try_start_28 .. :try_end_72} :catch_d2
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_28 .. :try_end_72} :catch_d9
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_28 .. :try_end_72} :catch_e0
 
     :goto_72
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     invoke-virtual {v0}, La/a/a;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1530,7 +1530,7 @@
     const/4 v1, 0x0
 
     :try_start_7b
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v2, p0, Lcom/test/NewC;->m:La/a/a;
 
     invoke-virtual {v2}, La/a/a;->getPackageName()Ljava/lang/String;
 
@@ -1571,7 +1571,7 @@
 
     if-eqz v1, :cond_a3
 
-    iput-boolean v4, p0, Lcom/android/mtp/rp/NewC;->q:Z
+    iput-boolean v4, p0, Lcom/test/NewC;->q:Z
 
     :cond_a3
     const-string v1, "RPMORE"
@@ -1594,7 +1594,7 @@
 
     if-eqz v0, :cond_b9
 
-    iput-boolean v4, p0, Lcom/android/mtp/rp/NewC;->r:Z
+    iput-boolean v4, p0, Lcom/test/NewC;->r:Z
 
     :cond_b9
     return-void
@@ -1790,7 +1790,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1820,7 +1820,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1856,7 +1856,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1886,7 +1886,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1910,7 +1910,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1934,7 +1934,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1958,7 +1958,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1989,7 +1989,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2007,7 +2007,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->e:Ljava/util/List;
+    sget-object v0, Lcom/test/NewC;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2030,7 +2030,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2075,7 +2075,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2116,7 +2116,7 @@
     return v0
 
     :cond_8
-    sget-object v1, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v1, Lcom/test/NewC;->i:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -2124,9 +2124,9 @@
 
     if-eqz v1, :cond_7
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v1, p0, Lcom/test/NewC;->m:La/a/a;
 
-    sget-object v2, Lcom/android/mtp/rp/NewC;->i:Ljava/util/Set;
+    sget-object v2, Lcom/test/NewC;->i:Ljava/util/Set;
 
     invoke-static {v1, v2}, La/a/e/a;->a(La/a/a;Ljava/util/Set;)Z
 
@@ -2157,7 +2157,7 @@
     return v0
 
     :cond_9
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v2, p0, Lcom/test/NewC;->m:La/a/a;
 
     invoke-static {v2, p1}, La/a/e/a;->a(La/a/a;Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
@@ -2181,7 +2181,7 @@
 
     if-eqz v3, :cond_3d
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v3, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v4, "RtLib"
 
@@ -2208,7 +2208,7 @@
     invoke-virtual {v3, v4, v5}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
     :cond_3d
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v3, p0, Lcom/test/NewC;->m:La/a/a;
 
     iget-object v4, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -2225,7 +2225,7 @@
     :cond_49
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->a(Ljava/lang/String;)Z
+    invoke-direct {p0, v2}, Lcom/test/NewC;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -2249,7 +2249,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2271,7 +2271,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2279,7 +2279,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2307,7 +2307,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2315,7 +2315,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2337,7 +2337,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2345,7 +2345,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2361,7 +2361,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2369,7 +2369,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2385,7 +2385,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2393,7 +2393,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2409,7 +2409,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2417,7 +2417,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2433,7 +2433,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     move v0, v1
 
@@ -2448,7 +2448,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2464,9 +2464,9 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->e:Ljava/util/List;
+    sget-object v0, Lcom/test/NewC;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2489,7 +2489,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2509,7 +2509,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v2, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     add-int/lit8 v0, v0, 0x1
 
@@ -2534,7 +2534,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2554,7 +2554,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     goto :goto_f5
 .end method
@@ -2568,7 +2568,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2767,7 +2767,7 @@
 
     :cond_6e
     :try_start_6e
-    iget-boolean v6, p0, Lcom/android/mtp/rp/NewC;->p:Z
+    iget-boolean v6, p0, Lcom/test/NewC;->p:Z
 
     if-eqz v6, :cond_22
 
@@ -2905,7 +2905,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2929,11 +2929,11 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->q:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->q:Z
 
     if-eqz v0, :cond_40
 
-    invoke-direct {p0, p1}, Lcom/android/mtp/rp/NewC;->a(Ljava/util/List;)V
+    invoke-direct {p0, p1}, Lcom/test/NewC;->a(Ljava/util/List;)V
 
     const/4 v0, 0x6
 
@@ -2941,7 +2941,7 @@
 
     fill-array-data v0, :array_42
 
-    invoke-static {v0}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2972,13 +2972,13 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v3, ""
 
     const-string v5, ""
 
-    iget-object v6, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v6, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v0, v3, v5, v6}, La/a/e/b;->a(La/a/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2986,7 +2986,7 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v5, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3029,7 +3029,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3063,7 +3063,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v6, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3101,7 +3101,7 @@
     :try_start_7c
     const-string v0, ""
 
-    invoke-static {v0, v5, v3}, Lcom/android/mtp/rp/Hello;->a(Ljava/lang/String;Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {v0, v5, v3}, Lcom/test/Hello;->a(Ljava/lang/String;Ljava/io/InputStream;Ljava/io/OutputStream;)V
     :try_end_81
     .catch Ljava/lang/Throwable; {:try_start_7c .. :try_end_81} :catch_22f
     .catchall {:try_start_7c .. :try_end_81} :catchall_221
@@ -3128,7 +3128,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3237,7 +3237,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3299,7 +3299,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3319,7 +3319,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3327,7 +3327,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3347,7 +3347,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3355,7 +3355,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3375,7 +3375,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3383,7 +3383,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3403,7 +3403,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     move v0, v2
 
@@ -3418,7 +3418,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3438,9 +3438,9 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->p:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->p:Z
 
     if-eqz v0, :cond_1c2
 
@@ -3450,7 +3450,7 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3464,7 +3464,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0, v3, v5}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v3, v5}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
     :try_end_1c2
     .catch Lb/a/a/c/a; {:try_start_db .. :try_end_1c2} :catch_1fb
     .catchall {:try_start_db .. :try_end_1c2} :catchall_207
@@ -3484,7 +3484,7 @@
 
     check-cast v0, Lb/a/a/e/f;
 
-    iget-object v7, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v7, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v5, v0, v7}, Lb/a/a/a/b;->a(Lb/a/a/e/f;Ljava/lang/String;)V
 
@@ -3501,7 +3501,7 @@
 
     invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v5, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3525,7 +3525,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
     :try_end_1f8
     .catch Lb/a/a/c/a; {:try_start_1c8 .. :try_end_1f8} :catch_1fb
     .catchall {:try_start_1c8 .. :try_end_1f8} :catchall_207
@@ -3644,11 +3644,11 @@
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3660,7 +3660,7 @@
 
     fill-array-data v4, :array_202
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3672,15 +3672,15 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_38
 
-    invoke-direct {p0, v5}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v5}, Lcom/test/NewC;->a(I)V
 
     :goto_37
     return v0
@@ -3688,11 +3688,11 @@
     :cond_38
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3704,7 +3704,7 @@
 
     fill-array-data v4, :array_224
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3716,26 +3716,26 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_67
 
-    invoke-direct {p0, v5}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v5}, Lcom/test/NewC;->a(I)V
 
     goto :goto_37
 
     :cond_67
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3747,7 +3747,7 @@
 
     fill-array-data v4, :array_246
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3759,15 +3759,15 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_96
 
-    invoke-direct {p0, v5}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v5}, Lcom/test/NewC;->a(I)V
 
     goto :goto_37
 
@@ -3778,11 +3778,11 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3796,7 +3796,7 @@
 
     fill-array-data v4, :array_268
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3808,15 +3808,15 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_cc
 
-    invoke-direct {p0, v6}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v6}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
@@ -3827,11 +3827,11 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3843,7 +3843,7 @@
 
     fill-array-data v4, :array_270
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3855,9 +3855,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
@@ -3865,18 +3865,18 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, v1}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v1}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
     :cond_102
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3888,7 +3888,7 @@
 
     fill-array-data v4, :array_27a
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3900,9 +3900,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
@@ -3910,18 +3910,18 @@
 
     const/16 v1, 0x8
 
-    invoke-direct {p0, v1}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v1}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
     :cond_134
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3935,7 +3935,7 @@
 
     fill-array-data v4, :array_284
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3947,26 +3947,26 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_166
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v0}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
     :cond_166
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3980,7 +3980,7 @@
 
     fill-array-data v4, :array_292
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3992,9 +3992,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
@@ -4002,18 +4002,18 @@
 
     const/4 v1, 0x4
 
-    invoke-direct {p0, v1}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v1}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
     :cond_199
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4027,7 +4027,7 @@
 
     fill-array-data v4, :array_2c8
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -4039,9 +4039,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v3
 
@@ -4049,18 +4049,18 @@
 
     const/4 v1, 0x5
 
-    invoke-direct {p0, v1}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v1}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
     :cond_1cc
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->b(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->b(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4074,7 +4074,7 @@
 
     fill-array-data v4, :array_2d8
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -4086,9 +4086,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->e()Z
+    invoke-direct {p0}, Lcom/test/NewC;->e()Z
 
     move-result v2
 
@@ -4096,7 +4096,7 @@
 
     const/4 v1, 0x6
 
-    invoke-direct {p0, v1}, Lcom/android/mtp/rp/NewC;->a(I)V
+    invoke-direct {p0, v1}, Lcom/test/NewC;->a(I)V
 
     goto/16 :goto_37
 
@@ -4525,7 +4525,7 @@
 
     const-string v0, "[^0-9a-zA-Z]+rw[^0-9a-zA-Z]+"
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->b(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/test/NewC;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -4537,7 +4537,7 @@
 
     const-string v0, "[^0-9a-zA-Z]+ro[^0-9a-zA-Z]+"
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->b(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/test/NewC;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -4585,7 +4585,7 @@
 
     move-result-object v1
 
-    sget-object v0, Lcom/android/mtp/rp/NewC;->e:Ljava/util/List;
+    sget-object v0, Lcom/test/NewC;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4599,11 +4599,11 @@
 
     if-nez v0, :cond_16f
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->r:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->r:Z
 
     if-eqz v0, :cond_1bd
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->s:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->s:Z
 
     if-nez v0, :cond_a2
 
@@ -4627,11 +4627,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4645,7 +4645,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4683,7 +4683,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4705,10 +4705,10 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     :cond_a2
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->t:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->t:Z
 
     if-nez v0, :cond_110
 
@@ -4732,11 +4732,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4750,7 +4750,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4788,7 +4788,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4810,7 +4810,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     :cond_110
     new-instance v0, Ljava/lang/StringBuilder;
@@ -4833,11 +4833,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4851,7 +4851,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4877,7 +4877,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4899,7 +4899,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     :goto_16e
     return v6
@@ -4919,7 +4919,7 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4933,7 +4933,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4959,7 +4959,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -4975,7 +4975,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     goto/16 :goto_2a
 
@@ -5000,11 +5000,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v7}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v7}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5018,7 +5018,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5056,7 +5056,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -5078,7 +5078,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v0, v5, v6}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     goto/16 :goto_16e
 .end method
@@ -5100,11 +5100,11 @@
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5116,7 +5116,7 @@
 
     fill-array-data v4, :array_1cc
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5128,9 +5128,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5143,11 +5143,11 @@
     :cond_36
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5159,7 +5159,7 @@
 
     fill-array-data v4, :array_1ee
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5171,9 +5171,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5181,11 +5181,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5197,7 +5197,7 @@
 
     fill-array-data v4, :array_210
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5209,9 +5209,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5223,11 +5223,11 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5241,7 +5241,7 @@
 
     fill-array-data v4, :array_232
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5253,9 +5253,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5267,11 +5267,11 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5283,7 +5283,7 @@
 
     fill-array-data v4, :array_23a
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5295,9 +5295,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5305,11 +5305,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5321,7 +5321,7 @@
 
     fill-array-data v4, :array_244
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5333,9 +5333,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5343,11 +5343,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5361,7 +5361,7 @@
 
     fill-array-data v4, :array_24e
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5373,9 +5373,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5383,11 +5383,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5401,7 +5401,7 @@
 
     fill-array-data v4, :array_25c
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5413,9 +5413,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5423,11 +5423,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5439,7 +5439,7 @@
 
     fill-array-data v4, :array_292
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5451,9 +5451,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v3
 
@@ -5461,11 +5461,11 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v2}, Lcom/android/mtp/rp/NewC;->c(Ljava/util/List;)V
+    invoke-direct {p0, v2}, Lcom/test/NewC;->c(Ljava/util/List;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v4, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5477,7 +5477,7 @@
 
     fill-array-data v4, :array_2a2
 
-    invoke-static {v4}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v4}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5489,9 +5489,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v3, v2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->f()Z
+    invoke-direct {p0}, Lcom/test/NewC;->f()Z
 
     move-result v2
 
@@ -5929,7 +5929,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -5937,7 +5937,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->new_l:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->new_l:Ljava/lang/String;
 
     const-string v2, "done"
 
@@ -5947,7 +5947,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcom/test/NewC;->a(Ljava/util/List;)V
 
     const-string v1, "reboot"
 
@@ -5955,7 +5955,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5967,7 +5967,7 @@
 
     fill-array-data v2, :array_18a
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -5979,11 +5979,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5995,7 +5995,7 @@
 
     fill-array-data v2, :array_1ac
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6007,11 +6007,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6023,7 +6023,7 @@
 
     fill-array-data v2, :array_1ce
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6035,7 +6035,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -6043,7 +6043,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcom/test/NewC;->a(Ljava/util/List;)V
 
     const-string v1, "reboot"
 
@@ -6051,7 +6051,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6065,7 +6065,7 @@
 
     fill-array-data v2, :array_1f0
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6077,7 +6077,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -6085,7 +6085,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcom/test/NewC;->a(Ljava/util/List;)V
 
     const-string v1, "reboot"
 
@@ -6093,7 +6093,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6105,7 +6105,7 @@
 
     fill-array-data v2, :array_1f8
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6117,11 +6117,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/NewC;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcom/test/NewC;->a(Ljava/util/List;)V
 
     const-string v1, "reboot"
 
@@ -6129,7 +6129,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6141,7 +6141,7 @@
 
     fill-array-data v2, :array_202
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6153,11 +6153,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6171,7 +6171,7 @@
 
     fill-array-data v2, :array_20c
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6183,11 +6183,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6201,7 +6201,7 @@
 
     fill-array-data v2, :array_21a
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6213,11 +6213,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6229,7 +6229,7 @@
 
     fill-array-data v2, :array_250
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6241,11 +6241,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v2, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6257,7 +6257,7 @@
 
     fill-array-data v2, :array_260
 
-    invoke-static {v2}, Lcom/android/mtp/rp/NewC;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/test/NewC;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6269,7 +6269,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v3}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
+    invoke-static {v1, v0, v3}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
 
     return-void
 
@@ -6697,11 +6697,11 @@
 
     const/4 v3, 0x0
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v0}, La/a/e/f;->a(Ljava/lang/String;)Z
 
@@ -6714,26 +6714,26 @@
     return-void
 
     :cond_f
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->b()V
+    invoke-direct {p0}, Lcom/test/NewC;->b()V
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->c()Z
+    invoke-direct {p0}, Lcom/test/NewC;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_cc
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->o:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->o:Z
 
     if-eqz v0, :cond_20
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->i()V
+    invoke-direct {p0}, Lcom/test/NewC;->i()V
 
     goto :goto_e
 
     :cond_20
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6757,22 +6757,22 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0, v2}, Lcom/android/mtp/rp/NewC;->a(Ljava/lang/String;I)Z
+    invoke-direct {p0, v0, v2}, Lcom/test/NewC;->a(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_43
 
-    iput-boolean v2, p0, Lcom/android/mtp/rp/NewC;->s:Z
+    iput-boolean v2, p0, Lcom/test/NewC;->s:Z
 
     :cond_43
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->r:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->r:Z
 
     if-eqz v0, :cond_6b
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/mtp/rp/NewC;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/test/NewC;->n:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6798,28 +6798,28 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, v0, v1}, Lcom/android/mtp/rp/NewC;->a(Ljava/lang/String;I)Z
+    invoke-direct {p0, v0, v1}, Lcom/test/NewC;->a(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_6b
 
-    iput-boolean v2, p0, Lcom/android/mtp/rp/NewC;->t:Z
+    iput-boolean v2, p0, Lcom/test/NewC;->t:Z
 
     :cond_6b
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->r:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->r:Z
 
     if-eqz v0, :cond_92
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->s:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->s:Z
 
     if-eqz v0, :cond_b1
 
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->t:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->t:Z
 
     if-eqz v0, :cond_b1
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -6827,28 +6827,28 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->new_l:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->new_l:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->b()V
+    invoke-direct {p0}, Lcom/test/NewC;->b()V
 
     goto/16 :goto_e
 
     :cond_92
-    iget-boolean v0, p0, Lcom/android/mtp/rp/NewC;->s:Z
+    iget-boolean v0, p0, Lcom/test/NewC;->s:Z
 
     if-eqz v0, :cond_b1
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -6856,30 +6856,30 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->new_l:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->new_l:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->b()V
+    invoke-direct {p0}, Lcom/test/NewC;->b()V
 
     goto/16 :goto_e
 
     :cond_b1
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->d()Z
+    invoke-direct {p0}, Lcom/test/NewC;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_e0
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -6887,21 +6887,21 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->g()Z
+    invoke-direct {p0}, Lcom/test/NewC;->g()Z
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->h()Z
+    invoke-direct {p0}, Lcom/test/NewC;->h()Z
 
     :cond_cc
     :goto_cc
-    invoke-direct {p0}, Lcom/android/mtp/rp/NewC;->b()V
+    invoke-direct {p0}, Lcom/test/NewC;->b()V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -6909,7 +6909,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->new_k:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->new_k:Ljava/lang/String;
 
     const-string v2, "done"
 
@@ -6918,7 +6918,7 @@
     goto/16 :goto_e
 
     :cond_e0
-    iget-object v0, p0, Lcom/android/mtp/rp/NewC;->m:La/a/a;
+    iget-object v0, p0, Lcom/test/NewC;->m:La/a/a;
 
     const-string v1, "RtLib"
 
@@ -6926,7 +6926,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const/4 v2, 0x0
 
@@ -6936,7 +6936,7 @@
 
     if-nez v1, :cond_f9
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "1"
 
@@ -6962,13 +6962,13 @@
 
     if-lt v1, v2, :cond_120
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "done"
 
     invoke-virtual {v0, v1, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->new_l:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->new_l:Ljava/lang/String;
 
     const-string v2, "canot"
 
@@ -6981,7 +6981,7 @@
     :catch_117
     move-exception v1
 
-    sget-object v1, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v1, Lcom/test/NewC;->j:Ljava/lang/String;
 
     const-string v2, "1"
 
@@ -6991,7 +6991,7 @@
 
     :cond_120
     :try_start_120
-    sget-object v2, Lcom/android/mtp/rp/NewC;->j:Ljava/lang/String;
+    sget-object v2, Lcom/test/NewC;->j:Ljava/lang/String;
 
     add-int/lit8 v1, v1, 0x1
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/MyReceiver;
+.class public Lcom/test/MyReceiver;
 .super Landroid/content/BroadcastReceiver;
 
 
@@ -12,7 +12,7 @@
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/MyReceiver;->a:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyReceiver;->a:Ljava/lang/String;
 
     const/16 v0, 0xa
 
@@ -20,11 +20,11 @@
 
     fill-array-data v0, :array_12
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyReceiver;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyReceiver;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyReceiver;->a:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyReceiver;->a:Ljava/lang/String;
 
     return-void
 
@@ -74,7 +74,7 @@
 
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/mtp/rp/MyService;
+    const-class v1, Lcom/test/MyService;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -96,7 +96,7 @@
 
     invoke-static {p1}, La/a/a/a;->a(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, p2}, Lcom/android/mtp/rp/MyReceiver;->a(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {p0, p1, p2}, Lcom/test/MyReceiver;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
     const-string v0, ""
 

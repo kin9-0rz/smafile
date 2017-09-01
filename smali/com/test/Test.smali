@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/Test;
+.class public Lcom/test/Test;
 .super Ljava/lang/Object;
 
 # direct methods
@@ -27,7 +27,7 @@
 
     invoke-static {p1}, La/a/a/a;->a(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, p2}, Lcom/android/mtp/rp/MyReceiver;->a(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {p0, p1, p2}, Lcom/test/MyReceiver;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
     const-string v0, ""
 

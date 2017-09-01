@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/MyService;
+.class public Lcom/test/MyService;
 .super Landroid/app/Service;
 
 
@@ -28,7 +28,7 @@
 
     const-string v0, ""
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->a:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->a:Ljava/lang/String;
 
     const/16 v0, 0xa
 
@@ -36,11 +36,11 @@
 
     fill-array-data v0, :array_46
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyService;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyService;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->a:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->a:Ljava/lang/String;
 
     const/4 v0, 0x6
 
@@ -48,21 +48,21 @@
 
     fill-array-data v0, :array_50
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyService;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyService;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->c:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->c:Ljava/lang/String;
 
     new-array v0, v1, [B
 
     fill-array-data v0, :array_58
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyService;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyService;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->d:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->d:Ljava/lang/String;
 
     const/16 v0, 0x8
 
@@ -70,25 +70,25 @@
 
     fill-array-data v0, :array_60
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyService;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyService;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->e:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->e:Ljava/lang/String;
 
     new-array v0, v1, [B
 
     fill-array-data v0, :array_68
 
-    invoke-static {v0}, Lcom/android/mtp/rp/MyService;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/test/MyService;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/mtp/rp/MyService;->f:Ljava/lang/String;
+    sput-object v0, Lcom/test/MyService;->f:Ljava/lang/String;
 
     const/16 v0, 0x9
 
-    sput v0, Lcom/android/mtp/rp/MyService;->newb:I
+    sput v0, Lcom/test/MyService;->newb:I
 
     return-void
 
@@ -192,7 +192,7 @@
 
     invoke-static {v0, v1}, La/a/e/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
     const-string v1, "RtLib"
 
@@ -202,7 +202,7 @@
 
     move-result-object v1
 
-    sget-object v0, Lcom/android/mtp/rp/MyService;->c:Ljava/lang/String;
+    sget-object v0, Lcom/test/MyService;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v5}, La/a/b/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -219,7 +219,7 @@
     if-nez v0, :cond_4b
 
     :cond_21
-    sget-object v0, Lcom/android/mtp/rp/MyService;->d:Ljava/lang/String;
+    sget-object v0, Lcom/test/MyService;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v5}, La/a/b/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -245,19 +245,19 @@
     return-void
 
     :cond_39
-    sget-object v0, Lcom/android/mtp/rp/MyService;->d:Ljava/lang/String;
+    sget-object v0, Lcom/test/MyService;->d:Ljava/lang/String;
 
     const-string v2, "doing"
 
     invoke-virtual {v1, v0, v2}, La/a/b/a;->b(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    new-instance v0, Lcom/android/mtp/rp/NewC;
+    new-instance v0, Lcom/test/NewC;
 
-    iget-object v1, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v1, p0, Lcom/test/MyService;->g:La/a/b;
 
-    invoke-direct {v0, v1}, Lcom/android/mtp/rp/NewC;-><init>(La/a/a;)V
+    invoke-direct {v0, v1}, Lcom/test/NewC;-><init>(La/a/a;)V
 
-    invoke-virtual {v0}, Lcom/android/mtp/rp/NewC;->start()V
+    invoke-virtual {v0}, Lcom/test/NewC;->start()V
 
     goto :goto_38
 
@@ -268,7 +268,7 @@
 
     invoke-static {v0, v2}, La/a/e/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/android/mtp/rp/MyService;->f:Ljava/lang/String;
+    sget-object v0, Lcom/test/MyService;->f:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v5}, La/a/b/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -313,7 +313,7 @@
     invoke-static {v2, v3}, La/a/e/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_81
-    iget-object v2, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v2, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v2}, La/a/b;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -323,7 +323,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v2, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v2}, La/a/b;->getApplicationContext()Landroid/content/Context;
 
@@ -366,7 +366,7 @@
     invoke-static {v2, v3}, La/a/e/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_b4
-    iget-object v2, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v2, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v2}, La/a/b;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -376,7 +376,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v2, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v2}, La/a/b;->getApplicationContext()Landroid/content/Context;
 
@@ -388,7 +388,7 @@
 
     :cond_c7
     :goto_c7
-    sget-object v0, Lcom/android/mtp/rp/MyService;->f:Ljava/lang/String;
+    sget-object v0, Lcom/test/MyService;->f:Ljava/lang/String;
 
     const-string v2, "done"
 
@@ -443,7 +443,7 @@
     return v0
 
     :cond_a
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v0}, La/a/b;->c()Landroid/app/ActivityManager;
 
@@ -513,7 +513,7 @@
 
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    invoke-virtual {p0}, Lcom/android/mtp/rp/MyService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/test/MyService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -525,19 +525,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iput-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v0, p0}, La/a/b;->a(Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
     invoke-virtual {v0}, La/a/b;->d()V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
-    sget v1, Lcom/android/mtp/rp/MyService;->newb:I
+    sget v1, Lcom/test/MyService;->newb:I
 
     invoke-virtual {v0, v1}, La/a/b;->a(I)V
 
@@ -569,13 +569,13 @@
 
     invoke-static {v0, v1}, La/a/e/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
     if-eqz v0, :cond_12
 
-    iget-object v0, p0, Lcom/android/mtp/rp/MyService;->g:La/a/b;
+    iget-object v0, p0, Lcom/test/MyService;->g:La/a/b;
 
-    sget v1, Lcom/android/mtp/rp/MyService;->newb:I
+    sget v1, Lcom/test/MyService;->newb:I
 
     invoke-virtual {v0, v1}, La/a/b;->a(I)V
 
@@ -584,17 +584,17 @@
 
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    invoke-virtual {p0}, Lcom/android/mtp/rp/MyService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/test/MyService;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/mtp/rp/MyService;->a(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/test/MyService;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_25
 
-    invoke-direct {p0}, Lcom/android/mtp/rp/MyService;->a()V
+    invoke-direct {p0}, Lcom/test/MyService;->a()V
 
     :cond_25
     const/4 v0, 0x2

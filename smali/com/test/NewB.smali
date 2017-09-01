@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/NewB;
+.class public Lcom/test/NewB;
 .super Ljava/lang/Object;
 
 
@@ -6,14 +6,14 @@
 .method public static declared-synchronized a(Ljava/lang/String;Ljava/util/List;Z)La/a/c/a;
     .registers 5
 
-    const-class v0, Lcom/android/mtp/rp/NewB;
+    const-class v0, Lcom/test/NewB;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
     :try_start_4
-    invoke-static {p0, p1, p2, v1}, Lcom/android/mtp/rp/NewB;->a(Ljava/lang/String;Ljava/util/List;ZLjava/io/BufferedWriter;)La/a/c/a;
+    invoke-static {p0, p1, p2, v1}, Lcom/test/NewB;->a(Ljava/lang/String;Ljava/util/List;ZLjava/io/BufferedWriter;)La/a/c/a;
     :try_end_7
     .catchall {:try_start_4 .. :try_end_7} :catchall_a
 
@@ -36,7 +36,7 @@
 
     const/4 v1, 0x0
 
-    const-class v5, Lcom/android/mtp/rp/NewB;
+    const-class v5, Lcom/test/NewB;
 
     monitor-enter v5
 

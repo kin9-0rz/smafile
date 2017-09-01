@@ -1,4 +1,4 @@
-.class public Lcom/android/mtp/rp/Hello;
+.class public Lcom/test/Hello;
 .super Ljava/lang/Object;
 
 
@@ -45,7 +45,7 @@
     :catch_18
     move-exception v0
 
-    const-class v1, Lcom/android/mtp/rp/Hello;
+    const-class v1, Lcom/test/Hello;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     invoke-direct {v0, p2, v1}, Ljavax/crypto/CipherInputStream;-><init>(Ljava/io/InputStream;Ljavax/crypto/Cipher;)V
 
-    invoke-static {v0, p3}, Lcom/android/mtp/rp/Hello;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {v0, p3}, Lcom/test/Hello;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
     :cond_28
     :goto_28
@@ -164,7 +164,7 @@
 
     invoke-direct {v0, p3, v1}, Ljavax/crypto/CipherOutputStream;-><init>(Ljava/io/OutputStream;Ljavax/crypto/Cipher;)V
 
-    invoke-static {p2, v0}, Lcom/android/mtp/rp/Hello;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {p2, v0}, Lcom/test/Hello;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
     goto :goto_28
 .end method
@@ -174,7 +174,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p0, v0, p1, p2}, Lcom/android/mtp/rp/Hello;->a(Ljava/lang/String;ILjava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {p0, v0, p1, p2}, Lcom/test/Hello;->a(Ljava/lang/String;ILjava/io/InputStream;Ljava/io/OutputStream;)V
 
     return-void
 .end method
