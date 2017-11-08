@@ -34,11 +34,14 @@ class SmaliDir:
         a([B)Ljava/security/Key;
         '''
         sf = self.get_smali_file(clz_name)
-        return sf.get_method(mtd_desc)
+        if sf:
+            return sf.get_method(mtd_desc)
 
-    def get_field(self, clz_name, field_desc):
+    def get_field(self, field_desc):
+        clz_name = field_desc.split('->')[0]
         sf = self.get_smali_file(clz_name)
-        return sf.get_field(field_desc)
+        if sf:
+            return sf.get_field(field_desc)
 
     def xref(self, desc):
         '''找出所有引用了该类、方法、变量的SmaliFile'''
@@ -147,7 +150,7 @@ class SmaliFile:
 
     def get_field(self, field_desc):
         for field in self._fields:
-            if field_desc in str(field):
+            if field_desc == str(field):
                 return field
 
     def parse(self):
@@ -241,14 +244,13 @@ class SmaliFile:
             f.write(self._content)
 
     def update_method(self, mtd):
-        print(str(mtd))
         mbody_ptn = (
             r'\.method .*?%s((?!\.end method)[.\s\S])*'
             r'\.end method') % re.escape(mtd.get_name() + mtd.get_sign())
         prog = re.compile(mbody_ptn)
         result = prog.search(self._content).group()
         start = result.index('\n')
-        old_body = result[start:-11]
+        old_body = result[start + 1:-11]
         if old_body in self._content:
             self._content = self._content.replace(old_body, mtd.get_body())
 
