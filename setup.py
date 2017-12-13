@@ -1,4 +1,5 @@
 import os
+
 from setuptools import setup
 
 
@@ -8,7 +9,7 @@ def read(fname):
 
 setup(
     name="smafile",
-    version="0.0.9",
+    version="0.1.0",
     author="mikusjelly",
     author_email="mikusjelly@gmail.com",
     description=("parse smali file"),
@@ -21,5 +22,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3 :: Only",
         "Topic :: Utilities",
-    ],
+    ]
 )

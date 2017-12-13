@@ -4,13 +4,45 @@ import re
 
 class SmaliDir:
 
-    def __init__(self, smali_dir):
-        # smali files
+    def __init__(self, smali_dir, filters=None):
+        """Init the smali directory.
+
+        Parameters
+        ----------
+        smali_dir : string
+            smali目录的路径
+        _filters : 迭代器
+            smali文件路径中只要包含了其中任意一个关键字，都不会被初始化。
+
+        Returns
+        -------
+        SmaliDir
+            返回一个可迭代的Smali目录对象
+
+        """
+        _filters = []
+        if filters:
+            for item in filters:
+                _filters.append(item.replace('.', os.sep))
+
+        sep = os.path.basename(smali_dir) + os.sep
+
         self._files = []
         for parent, _, filenames in os.walk(smali_dir):
             for filename in filenames:
-                if filename.endswith('.smali'):
-                    filepath = os.path.join(parent, filename)
+                if not filename.endswith('.smali'):
+                    continue
+
+                filepath = os.path.join(parent, filename)
+                cls_path = filepath.split(sep)[1]
+                if filters:
+                    for item in _filters:
+                        if item in cls_path:
+                            break
+                    else:
+                        sf = SmaliFile(filepath)
+                        self._files.append(sf)
+                else:
                     sf = SmaliFile(filepath)
                     self._files.append(sf)
 
