@@ -4,7 +4,7 @@ import re
 
 class SmaliDir:
 
-    def __init__(self, smali_dir, filters=None):
+    def __init__(self, smali_dir, include=None, exclude=None):
         """Init the smali directory.
 
         Parameters
@@ -21,8 +21,8 @@ class SmaliDir:
 
         """
         _filters = []
-        if filters:
-            for item in filters:
+        if exclude:
+            for item in exclude:
                 _filters.append(item.replace('.', os.sep))
 
         sep = os.path.basename(smali_dir) + os.sep
@@ -35,7 +35,17 @@ class SmaliDir:
 
                 filepath = os.path.join(parent, filename)
                 cls_path = filepath.split(sep)[1]
-                if filters:
+
+                if include:
+                    for item in include:
+                        if item in cls_path:
+                            print(item, filepath)
+                            sf = SmaliFile(filepath)
+                            self._files.append(sf)
+                            break
+                    continue
+
+                if exclude:
                     for item in _filters:
                         if item in cls_path:
                             break
