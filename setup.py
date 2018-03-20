@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -9,14 +9,15 @@ def read(fname):
 
 setup(
     name="smafile",
-    version="0.1.1",
+    version="0.1.2",
     author="mikusjelly",
     author_email="mikusjelly@gmail.com",
     description=("parse smali file"),
     license="MIT",
     keywords="smali",
     url="https://github.com/mikusjelly/smafile",
-    py_modules=["smafile"],
+    packages=find_packages(exclude=['tests']),
+
     classifiers=[
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: MIT License",
