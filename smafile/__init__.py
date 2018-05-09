@@ -241,7 +241,7 @@ class SmaliFile:
         mtd_prog = re.compile(mtd_ptn)
         for item in mtd_prog.finditer(self._content, re.M):
             line = item.group()
-            
+
             escape_line = re.escape(line)
             mbody_ptn = r'%s\n(.*?)\.end method' % escape_line
             mbody_prog = re.compile(mbody_ptn, re.DOTALL)
@@ -287,10 +287,13 @@ class SmaliFile:
 
     def update_method(self, mtd):
         mbody_ptn = (
-            r'\.method .*?%s((?!\.end method)[.\s\S])*'
+            r'\.method.*? %s((?!\.end method)[.\s\S])*?'
             r'\.end method') % re.escape(mtd.get_name() + mtd.get_sign())
         prog = re.compile(mbody_ptn)
-        result = prog.search(self._content).group()
+        match = prog.search(self._content)
+        if not match:
+            return self._content
+        result = match.group()
         start = result.index('\n')
         old_body = result[start + 1:-11]
         if old_body in self._content:
