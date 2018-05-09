@@ -1,4 +1,4 @@
-# smafile
+# smafile [![PyPI version](https://badge.fury.io/py/smafile.svg)](https://badge.fury.io/py/smafile) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ### Install
 
