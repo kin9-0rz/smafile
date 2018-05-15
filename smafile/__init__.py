@@ -29,6 +29,12 @@ class SmaliDir:
 
         sep = os.path.basename(smali_dir) + os.sep
 
+        tmp = []
+        if include:
+            for item in include:
+                tmp.append(item.replace('.', os.sep))
+        include = tmp
+
         self._files = []
         for parent, _, filenames in os.walk(smali_dir):
             for filename in filenames:

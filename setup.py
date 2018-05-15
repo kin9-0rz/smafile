@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name="smafile",
-    version="0.1.3",
+    version="0.1.4",
     author="mikusjelly",
     author_email="mikusjelly@gmail.com",
     description=("parse smali file"),
