@@ -240,8 +240,9 @@ class SmaliFile:
                     print(self._file_path)
                     print(line, e)
 
-            self._fields.append(SmaliField(
-                self._class, field_name, field_type, field_value))
+            sf = SmaliField(class_name=self._class)
+            sf.set_declaration_sm(line)
+            self._fields.append(sf)
 
         mtd_ptn = r'\n\.method (.*)'
         mtd_prog = re.compile(mtd_ptn)
@@ -282,23 +283,58 @@ class SmaliFile:
             self._file_path = file_path
 
     def update(self):
-        ''' update smali file. '''
+        '''
+        update smali file.
+        把内存的Smali文件内容，写入到文件
+        '''
+        for f in self._fields:
+            if not f.get_modified():
+                continue
+            self._update_field(f)
+            f.set_modified(False)
+
         for mtd in self._methods:
-            if mtd.get_modified():
-                self.update_method(mtd)
-                mtd.set_modified(False)
+            if not mtd.get_modified():
+                continue
+            self._update_method(mtd)
+            mtd.set_modified(False)
 
         with open(self._file_path, 'w', encoding='utf-8') as f:
             f.write(self._content)
+        
+    def _update_field(self, sf):
+        '''
+        更新Smali文件的指定成员变量Field，仅在内存中更新
+        '''
+        # 更新声明语句
+        old_sm = sf.get_old_declaration_sm()
+        sm = sf.get_declaration_sm()
+        self._content = self._content.replace(old_sm, sm)
+        
+        # 更新方法
+        # 对该Field赋值的语句，避免反编译可能失败的
+        rsm = sf.get_reference_sm()
+        ptn = r'\wput-object .*?, {}'.format(rsm)
 
-    def update_method(self, mtd):
+        for mtd in self._methods:
+            body = mtd.get_body()
+            if not re.search(ptn, body):
+                continue
+            body = re.sub(ptn, '', body)
+            mtd.set_body(body)
+            mtd.set_modified(True)
+
+    def _update_method(self, mtd):
+        '''
+        更新Smali文件的指定方法，仅在内存中更新
+        '''
         mbody_ptn = (
             r'\.method.*? %s((?!\.end method)[.\s\S])*?'
             r'\.end method') % re.escape(mtd.get_name() + mtd.get_sign())
         prog = re.compile(mbody_ptn)
         match = prog.search(self._content)
         if not match:
-            return self._content
+            return
         result = match.group()
         start = result.index('\n')
         old_body = result[start + 1:-11]
@@ -307,34 +343,127 @@ class SmaliFile:
 
 
 class SmaliField:
+    '''
+    Java Field 用以下语法声明：\n
+    [access_modifier] [static] [final] type name [= initial value] ;\n
 
-    def __init__(self, class_name, field_name, field_type, field_value):
+    Smali Field 的语法也差不多：\n
+    [access_modifier] [static] [final] name:type [= initial value]\n
+
+    Smali Field 包含2个区域：static fields 和 instance fields\n
+    如果要给instance fields赋值，那边必须把其声明为static，否则，smali回编译会报错。
+    '''
+
+    def __init__(self, dsm=None, class_name=None, field_name=None, field_type=None, field_value=None):
+        # _modifier，修饰符，包含了访问修饰符和非访问修饰符；为了方便，直接放一起。
+        # - 访问修饰符，private、protect等
+        # - 非访问修饰符，static、final、abstract等
+        self._modifier = []
+        self._is_static = False  # 用于修改静态属性
+        self._is_final = False
+
         self._class = class_name
         self._name = field_name
         self._type = field_type
         self._value = field_value
-        self._desc = class_name + '->' + field_name + ':' + field_type
+       
+        self._declaration_sm = dsm  # 声明语句
+        self._reference_sm = None # 引用语句
+
+        self._old_declaration_sm = None # 存放旧的声明语句，为方便将修改后内容写回文件
+        self._modified = False
+        self._desc = None
+
+
+    def set_declaration_sm(self, sm):
+        # .field protected static final z:Ljava/lang/String; = "Action"
+        self._declaration_sm = sm
+        items = sm.split(' = ')
+        parts = items[0].split()
+        self._modifier = parts[1:-1]
+        self._name, self._type = parts[-1].split(':')
+        self._is_static = 'static' in self._modifier
+        self._is_final = 'final' in self._modifier
+        if len(items) == 2:
+            self._value = items[1][1:-1]
+
+    def get_declaration_sm(self):
+        ref_sm = ['.field']
+        ref_sm.extend(self._modifier)
+        ref_sm.append(self._name + ':' + self._type)
+
+        if self._value:
+            ref_sm.append('=')
+            ref_sm.append('"{}"'.format(self._value))
+
+        return ' '.join(ref_sm)
+
+    def get_reference_sm(self):
+        return self._class + '->' + self._name + ':' + self._type
+
+    def get_old_declaration_sm(self):
+        return self._old_declaration_sm
+
+    def get_is_static(self):
+        return self._is_static
+
+    def set_is_static(self, flag):
+        self._is_static = flag
+        if flag and 'static' not in self._modifier:
+            self._modifier.append('static')
+        elif not flag and 'static' in self._modifier:
+            self._modifier.remove('static')
+
+    def get_is_final(self):
+        return self._is_final
+
+    def set_is_final(self, flag):
+        self._is_final = flag
+        if flag and 'final' not in self._modifier:
+            self._modifier.append('final')
+        elif not flag and 'final' in self._modifier:
+            self._modifier.remove('final')
 
     def get_class(self):
         return self._class
+    
+    def set_class(self, clz):
+        self._class = clz
 
     def get_name(self):
         return self._name
 
     def set_name(self, name):
         self._name = name
+        self._modified = True
 
     def get_type(self):
         return self._type
+
+    def set_type(self, mtype):
+        self._type = mtype
+        self._modified = True
 
     def get_value(self):
         return self._value
 
     def set_value(self, value):
+        self._old_declaration_sm = self.get_declaration_sm()
+
         self._value = value
+        self._modified = True
+        if not self._is_static:
+            self._is_static = True
+            self._modifier.append('static')
+
+    def set_modified(self, modified):
+        self._modified = modified
+
+    def get_modified(self):
+        return self._modified
 
     def __str__(self):
-        return self._desc
+        return self.get_reference_sm()
 
 
 class SmaliMethod:
