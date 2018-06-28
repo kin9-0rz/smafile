@@ -2,6 +2,88 @@ import os
 import re
 
 
+class SmaliLine:
+    '''
+    用于解析一行Smali代码
+    '''
+    @staticmethod
+    def parse_invoke_static(line):
+        '''
+        解析invoke-static语句
+
+        @return 返回(调用类名、方法名、参数类型、返回值类型、寄存器的值)
+        '''
+        INVOKE_STATIC_NORMAL = (
+            r'^invoke-static.*?{(?P<registers>.*?)}, (?P<cname>.*?;)'
+            r'->(?P<mname>.*?)\((?P<proto>.*?)\)(?P<rtype>.*?)\s*?$')
+        result = re.match(INVOKE_STATIC_NORMAL, line.strip())
+
+        cname = result['cname'].replace('/', '.')[1:-1]
+        ptypes = SmaliLine.parse_proto(result['proto'])
+        rnames = re.sub('\s', '', result['registers']).split(',')
+
+        return cname, result['mname'], ptypes, result['rtype'], rnames
+
+    @staticmethod
+    def parse_string(line):
+        '''
+        解析字符串相关函数
+
+        @return 返回值类型、操作寄存器名
+        '''
+        STRING_INIT_REG = (
+            r'invoke-direct {(?P<registers>.*?)}, '
+            r'Ljava/lang/String;-><init>\([\[BCI]+\)V')
+        result = re.match(STRING_INIT_REG, line.strip())
+
+        if result:
+            rnames = re.sub('\s', '', result['registers']).split(',')
+            return rnames[0], rnames
+        else:
+            return None, None
+
+    @staticmethod
+    def parse_proto(proto):
+        '''
+        解析方法原型
+        '''
+        result = []
+        PARAMETER_INDIVIDUATOR = r'(\[*(?:[BCDFIJSZ]|L[^;]+;))'
+        pattern2 = re.compile(PARAMETER_INDIVIDUATOR)
+        for item in pattern2.finditer(proto):
+            result.append(item.group())
+
+        return result
+
+    @staticmethod
+    def parse_move(line):
+        '''
+        move-result-object v0
+
+        @return 返回寄存器名 v0
+        '''
+        if 'move-result' in line:
+            return line.trim().split()[1]
+
+    @staticmethod
+    def parse_iget_object(line):
+        '''
+        解析字符串相关函数
+
+        @return 类名、字段名、返回类型、寄存器名
+        '''
+        REG = (
+            r'iget-object (?P<rname>v\d+), \w+, '
+            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+        )
+        result = re.match(REG, line.strip())
+        cname = SmaliLine.smali2java(result['cname'])
+        return cname, result['fname'], result['rtype'], result['rname']
+
+    @staticmethod
+    def smali2java(smali_clz):
+        return smali_clz.replace('/', '.').replace(';', '')[1:]
+
 class SmaliDir:
 
     def __init__(self, smali_dir, include=None, exclude=None):
@@ -34,6 +116,7 @@ class SmaliDir:
             for item in include:
                 tmp.append(item.replace('.', os.sep))
         include = tmp
+        print(include)
 
         self._files = []
         for parent, _, filenames in os.walk(smali_dir):
@@ -44,9 +127,11 @@ class SmaliDir:
                 filepath = os.path.join(parent, filename)
                 cls_path = filepath.split(sep)[1]
 
+                # print(filepath)
                 if include:
                     for item in include:
                         if item in filepath:
+                            print(filepath)
                             sf = SmaliFile(filepath)
                             self._files.append(sf)
                             break
@@ -204,7 +289,7 @@ class SmaliFile:
 
     def parse(self):
         with open(self._file_path, 'r', encoding='utf-8') as f:
-            self._content = f.read()
+            self._content = re.sub(r'\s*?\.line \d+', '', f.read())
 
         p = re.compile(r'^\.class[a-z\s]+(.+)')
         line = p.search(self._content).groups()
@@ -301,7 +386,7 @@ class SmaliFile:
 
         with open(self._file_path, 'w', encoding='utf-8') as f:
             f.write(self._content)
-        
+
     def _update_field(self, sf):
         '''
         更新Smali文件的指定成员变量Field，仅在内存中更新
@@ -310,7 +395,7 @@ class SmaliFile:
         old_sm = sf.get_old_declaration_sm()
         sm = sf.get_declaration_sm()
         self._content = self._content.replace(old_sm, sm)
-        
+
         # 更新方法
         # 对该Field赋值的语句，避免反编译可能失败的
         rsm = sf.get_reference_sm()
@@ -366,14 +451,13 @@ class SmaliField:
         self._name = field_name
         self._type = field_type
         self._value = field_value
-       
-        self._declaration_sm = dsm  # 声明语句
-        self._reference_sm = None # 引用语句
 
-        self._old_declaration_sm = None # 存放旧的声明语句，为方便将修改后内容写回文件
+        self._declaration_sm = dsm  # 声明语句
+        self._reference_sm = None  # 引用语句
+
+        self._old_declaration_sm = None  # 存放旧的声明语句，为方便将修改后内容写回文件
         self._modified = False
         self._desc = None
-
 
     def set_declaration_sm(self, sm):
         # .field protected static final z:Ljava/lang/String; = "Action"
@@ -426,7 +510,7 @@ class SmaliField:
 
     def get_class(self):
         return self._class
-    
+
     def set_class(self, clz):
         self._class = clz
 
@@ -468,14 +552,14 @@ class SmaliField:
 
 class SmaliMethod:
     '''
-    定义：
-    method_description : Lpackage/name/ObjectName;->MethodName(III)Z
-    class_name  : Lpackage/name/ObjectName;
-    mtd_name    : MethodName
-    mtd_sign    : (III)Z (方法签名)
-    proto       : III   (方法原型，由参数类型组成)
-    parameters  : I, I, I
-    return_type : Z
+    定义：\n
+    method_description : Lpackage/name/ClassName;->MethodName(III)Z\n
+    class_name  : Lpackage/name/ClassName;\n
+    mtd_name    : MethodName\n
+    mtd_sign    : (III)Z (方法签名)\n
+    proto       : III   (方法原型，由参数类型组成)\n
+    parameters  : I, I, I (参数类型)\n
+    return_type : Z\n
     '''
 
     def __init__(self, class_name, mtd_sign, body=None):
@@ -500,11 +584,7 @@ class SmaliMethod:
         self._desc = self._class + '->' + self._name + self._sign
 
         # parameters
-        self._params = []
-        PARAMETER_INDIVIDUATOR = r'(\[*(?:[BCDFIJSZ]|L[^;]+;))'
-        pattern2 = re.compile(PARAMETER_INDIVIDUATOR)
-        for item in pattern2.finditer(self._proto):
-            self._params.append(item.group())
+        self._params = SmaliLine.parse_proto(self._proto)
 
     def get_access_flags(self):
         return self._access_flags
