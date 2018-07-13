@@ -2,10 +2,83 @@ import os
 import re
 
 
+class NotSmaliClassException(Exception):
+
+    def __init__(self, clz):
+        err = '{} is not a class that conforms to the smali grammar.'.format(
+            clz)
+        Exception.__init__(self, err)
+
+
+def smali2java(smali_clz):
+    if not smali_clz.startswith('L') or not smali_clz.endswith(';'):
+        raise NotSmaliClassException(smali_clz)
+    return smali_clz.replace('/', '.')[1:-1]
+
+
+def java2smali(java_clz):
+    return 'L{};'.format(java_clz.replace('.', '/'))
+
+
 class SmaliLine:
     '''
     用于解析一行Smali代码
+    
+    按照opcode语法返回
     '''
+    @staticmethod
+    def parse(line):
+        if 'invoke-static' in line:
+            return SmaliLine.parse_invoke_static(line)
+
+        if 'Ljava/lang/String;->' in line:
+            return SmaliLine.parse_string(line)
+
+        if 'move-result-object' in line:
+            return SmaliLine.parse_move(line)
+
+        if 'iget-object' in line:
+            return SmaliLine.parse_iget_object(line)
+
+        if 'sget-object' in line:
+            return SmaliLine.parse_sget_object(line)
+        
+        if 'const-string' in line:
+            return SmaliLine.parse_const_string(line)
+
+        if 'sget ' in line:
+            return SmaliLine.parse_sget(line)
+
+        print('Could not parse: ' + line)
+        return
+
+    @staticmethod
+    def parse_const_string(line):
+        '''
+        const-string vx,string_id
+        
+        Puts reference to a string constant identified by string_id into vx.
+        '''
+        arrs = line.strip().split()
+        vx = arrs[1][:-1]
+        string_id = arrs[2][1:-1]
+        return (vx, string_id)
+
+    @staticmethod
+    def parse_sget(line):
+        '''
+        sget v0, Lcom/cmcc/papp/a/f;->e:I
+
+        @return 类名、字段名、返回类型、寄存器名
+        '''
+        REG = (
+            r'sget (?P<rname>v\d+), '
+            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+        )
+        result = re.match(REG, line.strip())
+        cname = smali2java(result['cname'])
+        return cname, result['fname'], result['rtype'], result['rname']
+
     @staticmethod
     def parse_invoke_static(line):
         '''
@@ -58,17 +131,16 @@ class SmaliLine:
     @staticmethod
     def parse_move(line):
         '''
-        move-result-object v0
+        move-result-object vx
 
-        @return 返回寄存器名 v0
+        @return 返回寄存器名 vx
         '''
-        if 'move-result' in line:
-            return line.trim().split()[1]
+        return line.strip().split()[1]
 
     @staticmethod
     def parse_iget_object(line):
         '''
-        解析字符串相关函数
+        iget-object v0, p0, Lcom/android/unit/d;->a:Landroid/content/Context;
 
         @return 类名、字段名、返回类型、寄存器名
         '''
@@ -77,12 +149,24 @@ class SmaliLine:
             r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
         )
         result = re.match(REG, line.strip())
-        cname = SmaliLine.smali2java(result['cname'])
+        cname = smali2java(result['cname'])
         return cname, result['fname'], result['rtype'], result['rname']
 
     @staticmethod
-    def smali2java(smali_clz):
-        return smali_clz.replace('/', '.').replace(';', '')[1:]
+    def parse_sget_object(line):
+        '''
+        sget-object v0, Lcom/c/a/a/f;->b:[B
+
+        @return 类名、字段名、返回类型、寄存器名
+        '''
+        REG = (
+            r'sget-object (?P<rname>v\d+), '
+            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+        )
+        result = re.match(REG, line.strip())
+        cname = smali2java(result['cname'])
+        return cname, result['fname'], result['rtype'], result['rname']
+
 
 class SmaliDir:
 
@@ -116,7 +200,6 @@ class SmaliDir:
             for item in include:
                 tmp.append(item.replace('.', os.sep))
         include = tmp
-        print(include)
 
         self._files = []
         for parent, _, filenames in os.walk(smali_dir):
@@ -127,11 +210,9 @@ class SmaliDir:
                 filepath = os.path.join(parent, filename)
                 cls_path = filepath.split(sep)[1]
 
-                # print(filepath)
                 if include:
                     for item in include:
                         if item in filepath:
-                            print(filepath)
                             sf = SmaliFile(filepath)
                             self._files.append(sf)
                             break
@@ -387,18 +468,27 @@ class SmaliFile:
         with open(self._file_path, 'w', encoding='utf-8') as f:
             f.write(self._content)
 
-    def _update_field(self, sf):
+    def _update_field(self, sfield):
         '''
         更新Smali文件的指定成员变量Field，仅在内存中更新
         '''
+        rsm = sfield.get_reference_sm()
+        if '[Ljava/lang/String;' == sfield.get_type():
+            codes = SmaliFile.__genarate_string_array_codes(sfield.get_value(), rsm)
+            mtd = self.get_method(sfield.get_class() + '-><clinit>()V')
+            mtd.set_body(mtd.get_body().replace('return-void', codes))
+            self._update_method(mtd)
+            return
+
+        # 下面则是更新字符串
         # 更新声明语句
-        old_sm = sf.get_old_declaration_sm()
-        sm = sf.get_declaration_sm()
+        old_sm = sfield.get_old_declaration_sm()
+        sm = sfield.get_declaration_sm()
         self._content = self._content.replace(old_sm, sm)
 
         # 更新方法
-        # 对该Field赋值的语句，避免反编译可能失败的
-        rsm = sf.get_reference_sm()
+        # 删除所有对该Field赋值的语句，避免反编译失败
+        
         ptn = r'\wput-object .*?, {}'.format(rsm)
 
         for mtd in self._methods:
@@ -408,6 +498,37 @@ class SmaliFile:
             body = re.sub(ptn, '', body)
             mtd.set_body(body)
             mtd.set_modified(True)
+
+    @staticmethod
+    def __genarate_string_array_codes(str_arr, rsm):
+        '''
+        根据字符串数组的内容，生成smali代码
+        '''
+        num = len(str_arr)
+        snippet = '''
+            const/16 v0, {}
+            new-array v0, v0, [Ljava/lang/String;
+        '''.format(hex(num))
+
+        # 注意：
+        # const/4 只能表示 -8到7，如果数组大于8，那么会出错。
+        # const/16 则可以表示更大的数
+        part = '''
+            const/16 v1, {}
+            const-string v2, "{}"
+            aput-object v2, v0, v1
+        '''
+        index = 0
+        for item in str_arr:
+            smali_str = str(item.encode('unicode-escape'))[2:-1].replace('\\\\', '\\')
+            snippet += part.format(hex(index), smali_str)
+            index += 1
+        
+        snippet += '''
+            sput-object v0, {}
+            return-void'''.format(rsm)
+
+        return snippet
 
     def _update_method(self, mtd):
         '''
