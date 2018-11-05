@@ -299,6 +299,8 @@ class SmaliDir:
             old = ' ' + arrs[1]
             new = ' ' + new_desc.split('->')[1]
 
+        is_inner_class = '$' in desc
+
         for sf in self._files:
             file_path = None
             if arrs and str(sf) == arrs[0] and old in sf.get_content():
@@ -313,6 +315,21 @@ class SmaliDir:
                     old_file_path = sf.get_file_path()
                     file_path = os.path.join(
                         self.root_dir, *new_desc[1:-1].split('/')) + '.smali'
+
+            if is_inner_class and desc in str(sf):
+                # 如果更新的是内部类，还需要修改注解部分
+                # .annotation system Ldalvik/annotation/InnerClass;
+                #     accessFlags = 0x0
+                #     name = "NewInnerClassName"
+                # .end annotation
+                n = desc.split('$')[1][:-1]
+                native_str = str(n.encode('unicode-escape'), 'utf-8')
+                old_name_dsm = 'name = "{}"'.format(native_str)
+                new_name_dsm = 'name = "{}"'.format(
+                    new_desc.split('$')[1][:-1])
+                sf.set_content(sf.get_content().replace(
+                    old_name_dsm, new_name_dsm))
+                sf.set_modified(True)
 
             if sf.get_modified():
                 sf.save(file_path)
