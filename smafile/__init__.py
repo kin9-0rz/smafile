@@ -23,13 +23,17 @@ def java2smali(java_clz):
 class SmaliLine:
     '''
     用于解析一行Smali代码
-    
+
     按照opcode语法返回
     '''
     @staticmethod
     def parse(line):
+        opcode = line.split()[0]
         if 'invoke-static' in line:
             return SmaliLine.parse_invoke_static(line)
+
+        if 'invoke-virtual' in line:
+            return SmaliLine.parse_invoke_virtual(line)
 
         if 'Ljava/lang/String;->' in line:
             return SmaliLine.parse_string(line)
@@ -37,12 +41,12 @@ class SmaliLine:
         if 'move-result-object' in line:
             return SmaliLine.parse_move(line)
 
-        if 'iget-object' in line:
-            return SmaliLine.parse_iget_object(line)
+        if 'iget' in opcode:
+            return SmaliLine.parse_iget(line)
 
         if 'sget-object' in line:
             return SmaliLine.parse_sget_object(line)
-        
+
         if 'const-string' in line:
             return SmaliLine.parse_const_string(line)
 
@@ -56,7 +60,7 @@ class SmaliLine:
     def parse_const_string(line):
         '''
         const-string vx,string_id
-        
+
         Puts reference to a string constant identified by string_id into vx.
         '''
         arrs = line.strip().split()
@@ -72,8 +76,8 @@ class SmaliLine:
         @return 类名、字段名、返回类型、寄存器名
         '''
         REG = (
-            r'sget (?P<rname>v\d+), '
-            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+            r'sget (?P<rname>.*?), '
+            r'(?P<cname>.*?;)->(?P<fname>.*?):(?P<rtype>.*)'
         )
         result = re.match(REG, line.strip())
         cname = smali2java(result['cname'])
@@ -94,6 +98,24 @@ class SmaliLine:
         cname = result['cname'].replace('/', '.')[1:-1]
         ptypes = SmaliLine.parse_proto(result['proto'])
         rnames = re.sub('\s', '', result['registers']).split(',')
+
+        return cname, result['mname'], ptypes, result['rtype'], rnames
+
+    @staticmethod
+    def parse_invoke_virtual(line):
+        '''
+        解析invoke-virtual语句
+
+        @return 返回(调用类名、方法名、参数类型、返回值类型、寄存器的值)
+        '''
+        INVOKE_STATIC_NORMAL = (
+            r'^invoke-virtual.*?{(?P<registers>.*?)}, (?P<cname>.*?;)'
+            r'->(?P<mname>.*?)\((?P<proto>.*?)\)(?P<rtype>.*?)\s*?$')
+        result = re.match(INVOKE_STATIC_NORMAL, line.strip())
+
+        cname = result['cname'].replace('/', '.')[1:-1]
+        ptypes = SmaliLine.parse_proto(result['proto'])
+        rnames = re.sub('\s', '', result['registers']).split(',')[1:]
 
         return cname, result['mname'], ptypes, result['rtype'], rnames
 
@@ -138,15 +160,16 @@ class SmaliLine:
         return line.strip().split()[1]
 
     @staticmethod
-    def parse_iget_object(line):
+    def parse_iget(line):
         '''
+        iget v0, p0, Lcom/a/b/c;->g:I
         iget-object v0, p0, Lcom/android/unit/d;->a:Landroid/content/Context;
 
         @return 类名、字段名、返回类型、寄存器名
         '''
         REG = (
-            r'iget-object (?P<rname>v\d+), \w+, '
-            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+            r'iget(?:-object|) (?P<rname>.*?), \w+, '
+            r'(?P<cname>.*?;)->(?P<fname>.*?):(?P<rtype>.*)'
         )
         result = re.match(REG, line.strip())
         cname = smali2java(result['cname'])
@@ -160,8 +183,8 @@ class SmaliLine:
         @return 类名、字段名、返回类型、寄存器名
         '''
         REG = (
-            r'sget-object (?P<rname>v\d+), '
-            r'(?P<cname>.*?);->(?P<fname>.*?):(?P<rtype>.*)'
+            r'sget-object (?P<rname>.*?), '
+            r'(?P<cname>.*?;)->(?P<fname>.*?):(?P<rtype>.*)'
         )
         result = re.match(REG, line.strip())
         cname = smali2java(result['cname'])
@@ -188,6 +211,7 @@ class SmaliDir:
             返回一个可迭代的Smali目录对象
 
         """
+        self.root_dir = smali_dir
         _filters = []
         if exclude:
             for item in exclude:
@@ -286,12 +310,12 @@ class SmaliDir:
                 sf.set_modified(True)
 
                 if desc == str(sf):
+                    old_file_path = sf.get_file_path()
                     file_path = os.path.join(
-                        'smali', *new_desc[1:-1].split('/')) + '.smali'
+                        self.root_dir, *new_desc[1:-1].split('/')) + '.smali'
 
             if sf.get_modified():
                 sf.save(file_path)
-                sf.parse()
 
 
 class SmaliFile:
@@ -299,13 +323,18 @@ class SmaliFile:
     def __init__(self, file_path):
         # smali文件路径，用于代码更新
         self._file_path = file_path
+        self._dir = None
         self.source_file = file_path
         # 是否编辑过，如果编辑过，则需要保存
         self._modified = False
         # smali的类名 - 所有的类、方法、参数都是用smali格式
-        self._class = None
+        self._class = None  # La/b/c;
+        # c, not La/b/c;
+        self._name = None
         # 父类的类名
         self._supper_class = None
+        # 包名
+        self.__package = None
         # 接口列表
         self._interfaces = []
         # 成员方法
@@ -319,6 +348,9 @@ class SmaliFile:
 
     def __str__(self):
         return self._class
+
+    def get_package(self):
+        return self.__package
 
     def get_file_path(self):
         return self._file_path
@@ -368,7 +400,11 @@ class SmaliFile:
             if field_desc == str(field):
                 return field
 
+    def get_dir(self):
+        return self._dir
+
     def parse(self):
+        self._dir = os.path.dirname(self._file_path)
         with open(self._file_path, 'r', encoding='utf-8') as f:
             self._content = re.sub(r'\s*?\.line \d+', '', f.read())
 
@@ -448,6 +484,10 @@ class SmaliFile:
             os.remove(self._file_path)
             self._file_path = file_path
 
+        self._fields.clear()
+        self._methods.clear()
+        self.parse()
+
     def update(self):
         '''
         update smali file.
@@ -474,7 +514,8 @@ class SmaliFile:
         '''
         rsm = sfield.get_reference_sm()
         if '[Ljava/lang/String;' == sfield.get_type():
-            codes = SmaliFile.__genarate_string_array_codes(sfield.get_value(), rsm)
+            codes = SmaliFile.__genarate_string_array_codes(
+                sfield.get_value(), rsm)
             mtd = self.get_method(sfield.get_class() + '-><clinit>()V')
             mtd.set_body(mtd.get_body().replace('return-void', codes))
             self._update_method(mtd)
@@ -488,7 +529,7 @@ class SmaliFile:
 
         # 更新方法
         # 删除所有对该Field赋值的语句，避免反编译失败
-        
+
         ptn = r'\wput-object .*?, {}'.format(rsm)
 
         for mtd in self._methods:
@@ -520,10 +561,11 @@ class SmaliFile:
         '''
         index = 0
         for item in str_arr:
-            smali_str = str(item.encode('unicode-escape'))[2:-1].replace('\\\\', '\\')
+            smali_str = str(item.encode('unicode-escape')
+                            )[2:-1].replace('\\\\', '\\')
             snippet += part.format(hex(index), smali_str)
             index += 1
-        
+
         snippet += '''
             sput-object v0, {}
             return-void'''.format(rsm)
@@ -574,14 +616,21 @@ class SmaliField:
         self._value = field_value
 
         self._declaration_sm = dsm  # 声明语句
-        self._reference_sm = None  # 引用语句
+        self._reference_sm = None  # 引用语句，其他引用该field的语句
 
         self._old_declaration_sm = None  # 存放旧的声明语句，为方便将修改后内容写回文件
         self._modified = False
         self._desc = None
 
+    def get_desc(self):
+        return self.get_reference_sm()
+
     def set_declaration_sm(self, sm):
-        # .field protected static final z:Ljava/lang/String; = "Action"
+        '''
+        声明语句, 整句
+        .field protected static final z:Ljava/lang/String; = "Action"
+        '''
+
         self._declaration_sm = sm
         items = sm.split(' = ')
         parts = items[0].split()
@@ -731,6 +780,7 @@ class SmaliMethod:
         同理 field的命名也是
         '''
         self._name = name
+        self._desc = self._class + '->' + self._name + self._sign
 
     def get_proto(self):
         return self._proto
@@ -749,6 +799,9 @@ class SmaliMethod:
 
     def get_sign(self):
         return self._sign
+
+    def get_desc(self):
+        return self._desc
 
     def __str__(self):
         return self._desc

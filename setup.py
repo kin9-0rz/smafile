@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 
 def read(fname):
@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name="smafile",
-    version="0.3.1",
+    version="0.4.1",
     author="mikusjelly",
     author_email="mikusjelly@gmail.com",
     description=("parse smali file"),
