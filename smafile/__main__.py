@@ -1,6 +1,4 @@
-import os
-
-from smafile import SmaliDir, SmaliMethod
+from smafile import __VERSION__, SmaliDir
 
 
 def main(args):
@@ -12,7 +10,6 @@ def main(args):
 
 
 if __name__ == '__main__':
-    __VERSION__ = '0.1.2'
 
     import argparse
     parser = argparse.ArgumentParser(prog='smafile', description=None)

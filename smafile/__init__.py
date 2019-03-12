@@ -1,6 +1,8 @@
 import os
 import re
 
+__VERSION__ = '0.4.3'
+
 
 class NotSmaliClassException(Exception):
 
@@ -267,6 +269,12 @@ class SmaliDir:
             if clz_name == sf.get_class():
                 return sf
 
+    def get_method_from_desc(self, full_desc):
+        clz_name, mtd_desc = full_desc.split('->')
+        sf = self.get_smali_file(clz_name)
+        if sf:
+            return sf.get_method(mtd_desc)
+
     def get_method(self, clz_name, mtd_desc):
         '''
         Lcom/android/mtp/rp/a;
@@ -312,7 +320,7 @@ class SmaliDir:
                 sf.set_modified(True)
 
                 if desc == str(sf):
-                    old_file_path = sf.get_file_path()
+                    # old_file_path = sf.get_file_path()
                     file_path = os.path.join(
                         self.root_dir, *new_desc[1:-1].split('/')) + '.smali'
 
