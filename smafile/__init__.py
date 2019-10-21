@@ -818,6 +818,7 @@ class SmaliMethod:
 
     def set_body(self, new_body):
         self._body = new_body
+        self._modified = True
 
     def get_params(self):
         return self._params
