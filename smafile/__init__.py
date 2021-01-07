@@ -193,60 +193,52 @@ class SmaliLine:
         return cname, result['fname'], result['rtype'], result['rname']
 
 
+INCLUDE = 2 # 包含操作
+EXCLUDE = 1 # 排除操作
+NO_OPT = 0 # 无操作
+
 class SmaliDir:
 
-    def __init__(self, smali_dir, include=None, exclude=None):
-        """Init the smali directory.
+    def __init__(self, smali_dirs: list, filters: list, opt: int):
+        """初始化smali目录
 
-        Parameters
-        ----------
-        smali_dir : string
-            smali目录的路径
-        include : 迭代器
-            smali文件路径中若包含了其中任意一个关键字，则初始化。
-        exclude :
-            smali文件路径中只要包含了其中任意一个关键字，都不会被初始化。
+        :param smali_dirs: smali目录列表
+        :type smali_dirs: list
+        :param filters: 过滤器，包(a/b/)，类(a/b/c)，都可以
+        :type filters: list
+        :param opt: 如果值为2，那么仅初始化过滤器命中的文件；如果值为1，则初始化过滤器不命中的文件；如果为0，则全部初始化。
+        :type opt: int
+        """        
+        self._files = [] # 存放已解析的smali文件
 
-        Returns
-        -------
-        SmaliDir
-            返回一个可迭代的Smali目录对象
+        self.filters = filters
+        self.opt = opt
 
-        """
-        self.root_dir = smali_dir
-        _filters = []
-        if exclude:
-            for item in exclude:
-                _filters.append(item.replace('.', os.sep))
+        counter = 0
+        for item in self.filters:
+            filters[counter] = item.replace('.', os.sep)
+            filters += 1
 
-        sep = os.path.basename(smali_dir) + os.sep
+        for smali_dir in smali_dirs:
+            self.init_smali_dir(smali_dir)     
 
-        tmp = []
-        if include:
-            for item in include:
-                tmp.append(item.replace('.', os.sep))
-        include = tmp
-
-        self._files = []
+    def init_smali_dir(self, smali_dir):
         for parent, _, filenames in os.walk(smali_dir):
             for filename in filenames:
                 if not filename.endswith('.smali'):
                     continue
 
                 filepath = os.path.join(parent, filename)
-                cls_path = filepath.split(sep)[1]
 
-                if include:
-                    for item in include:
+                if self.opt == INCLUDE:
+                    for item in self.filters:
                         if item in filepath:
                             sf = SmaliFile(filepath)
                             self._files.append(sf)
-                            break
-                    continue
-
-                if exclude:
-                    for item in _filters:
-                        if item in cls_path:
+                        break
+                elif self.opt == EXCLUDE:
+                    for item in self.filters:
+                        if item in filepath:
                             break
                     else:
                         sf = SmaliFile(filepath)
@@ -298,31 +290,41 @@ class SmaliDir:
                 sfs.append(sfs)
 
     def update_desc(self, desc, new_desc):
-        '''
-        找出所有引用了该类、方法、变量的SmaliFile，并更新
-        '''
+        """找出所有引用了该类、方法、变量的SmaliFile，并更新
+
+        :param desc: [description]
+        :type desc: [type]
+        :param new_desc: [description]
+        :type new_desc: [type]
+        """
         arrs = []
+        old = None
+        new = None
+
+        # 如果替换的方法、变化，则会带有->符号。
         if '->' in desc:
             arrs = desc.split('->')
-            old = ' ' + arrs[1]
-            new = ' ' + new_desc.split('->')[1]
+            old = ' ' + arrs[1]  # 旧类名
+            new = ' ' + new_desc.split('->')[1]  # 新的类名
 
         is_inner_class = '$' in desc
 
         for sf in self._files:
             file_path = None
-            if arrs and str(sf) == arrs[0] and old in sf.get_content():
-                sf.set_content(sf.get_content().replace(old, new))
-                sf.set_modified(True)
+            # 单纯替换类名
+            if old is not None:
+                if arrs and str(sf) == arrs[0] and old in sf.get_content():
+                    sf.set_content(sf.get_content().replace(old, new))
+                    sf.set_modified(True)
 
             if desc in sf.get_content():
                 sf.set_content(sf.get_content().replace(desc, new_desc))
                 sf.set_modified(True)
 
                 if desc == str(sf):
-                    # old_file_path = sf.get_file_path()
+                    smali_dir = os.path.dirname(sf.get_file_path())
                     file_path = os.path.join(
-                        self.root_dir, *new_desc[1:-1].split('/')) + '.smali'
+                        smali_dir, *new_desc[1:-1].split('/')) + '.smali'
 
             if is_inner_class and desc in str(sf):
                 # 如果更新的是内部类，还需要修改注解部分

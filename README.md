@@ -44,3 +44,18 @@ sd.update_desc('La/b/c;->b:I',
 sd.update_desc('La/b/c;->b()V',
                 'La/b/c;->newb()V')
 ```
+
+### 说明
+
+
+```
+method_description : Lpackage/name/ClassName;->MethodName(III)Z
+class_name  : Lpackage/name/ClassName;
+mtd_name    : MethodName
+mtd_sign    : (III)Z (方法签名)
+proto       : III   (方法原型，由参数类型组成)
+parameters  : I, I, I (参数类型)
+return_type : Z，返回类型
+
+Lcom/a;->a()V改名为Lcom/a;->b()V
+```
